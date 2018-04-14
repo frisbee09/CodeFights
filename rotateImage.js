@@ -1,21 +1,19 @@
 function rotateImage(a) {
+    
+    // We initialise an empty array to construct our rotated array
     let rotatedArr = [];
     for (row = 0; row < a.length; row++) {
-        for (col = 0; col < a[0].length; col++) {
-            rotatedArr[j][a.length - 1 - i] = a[i][j];
+        // When starting a new row, we push an empty row to rotated array
+        rotatedArr.push([]);
+
+        // Now we loop as many times as required for the length of the array
+        for (col = 0; col < a.length; col++) {
+
+            // We find the element via this relationship of indices
+            rotatedArr[row].push(a[a.length-1-col][row])
         }
     }
 
+    // console.log(rotatedArr);
     return rotatedArr;
 }
-
-rotateImage([[33,35,8,24,19,1,3,1,4,5], 
- [25,27,40,25,17,35,20,3,19,3], 
- [9,1,9,30,9,25,32,12,15,22], 
- [30,47,25,10,18,1,19,17,43,17], 
- [40,46,42,34,18,48,29,40,31,39], 
- [37,42,37,19,45,1,4,46,48,13], 
- [8,26,31,46,44,24,34,29,12,25], 
- [45,48,36,12,33,12,4,45,22,37], 
- [33,15,34,25,34,8,50,48,30,28], 
- [18,19,22,29,15,43,38,30,8,47]]);
