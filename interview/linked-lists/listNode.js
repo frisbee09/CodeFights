@@ -6,6 +6,7 @@ class ListNode {
 }
 
 setupLinkedList = (arr) => {
+    // Form a linked list from an input array.
     var returnLinked = new ListNode(arr[0]);
     var currentNode = returnLinked;
     for (i=1; i< arr.length; i++) {
@@ -30,8 +31,18 @@ reverseList = (list) => {
     return previous;
 }
 
+printLinkedList = (linked) => {
+    var output = [];
+    while (linked) {
+        output.push(linked.value);
+        linked = linked.next;
+    }
+    return output;
+}
+
 module.exports = {
     ListNode,
     setupLinkedList,
     reverseList,
+    printLinkedList,
 };
