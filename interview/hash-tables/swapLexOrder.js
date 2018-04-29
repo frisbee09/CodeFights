@@ -15,7 +15,6 @@ swapLexOrder = (string, swapArr) => {
             } else {
                 swaps.set(validSwap[j], [validSwap[j == 0 ?1 : 0]]);
             }
-
         }
     }
 
@@ -61,8 +60,8 @@ swapLexOrder = (string, swapArr) => {
             answer += stringIndex.get(charPos);
         }
     }
-    console.log(paths);
-    console.log(cycles);
+    
+    
     return answer;
 }
 
